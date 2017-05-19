@@ -1,6 +1,6 @@
 module ALU(Carpan,Carpilan,Result,AluOp,Ainvert,Binvert,Zero);
 input [4:0] Carpan,Carpilan;
-output reg [7:0] Result;//Normalde Result register değil.
+output reg [7:0] Result;//Normalde Result register deÄ‘il.
 input [1:0] AluOp;
 input Ainvert,Binvert;
 output Zero;
@@ -20,14 +20,14 @@ input [3:0] Carpan,Carpilan;
 always @(posedge clk)
 if(Carpan[0]==0)
 {
-assign Carpim={{1'b0},{Carpim[7:1]}};//sağa kaydırdık
+assign Carpim={{1'b0},{Carpim[7:1]}};//saÄ‘a kaydÃ½rdÃ½k
 assign Carpan={{1'b0},{Carpan[3:1]}};
 }
 
 if(Carpan[0]==1)
 {
 assign Carpim[7:4]=Carpim[7:4]+Carpilan;
-assign Carpim={{1'b0},{Carpim[7:1]}};//sağa kaydırdık
+assign Carpim={{1'b0},{Carpim[7:1]}};//saÄ‘a kaydÃ½rdÃ½k
 assign Carpan={{1'b0},{Carpan[3:1]}};
 }
 
